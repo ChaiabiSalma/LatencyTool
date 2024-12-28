@@ -246,3 +246,7 @@ Votre projet full-stack devrait maintenant être opérationnel localement. Si vo
 # Video Demonstration
 
 
+https://github.com/user-attachments/assets/498eceee-6b63-4fd3-9fe0-362dd2ffa26b
+
+
+
