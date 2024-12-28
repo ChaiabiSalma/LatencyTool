@@ -1,0 +1,428 @@
+/* App.css */
+
+/* Général */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 60px; /* L'espace li kaykhlli footer f l'asfal (i3ti 7isab l'3rd dyal footer) */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 10px 20px;  /* Réduction de padding */
+  color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  /* Légère réduction de l'ombre */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;  /* Réduction de la taille du titre */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 40px; /* Réduction de la taille du logo */
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px; /* Réduction de l'espace entre les éléments du menu */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 0.9rem; /* Réduction de la taille des liens */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #61dafb;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  position: fixed; /* Fixation */
+  bottom: 0; /* F l'asfal */
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9rem; /* Réduction de la taille du texte */
+}
+
+footer a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #21a1f1;
+  text-decoration: underline;
+}
+
+/* Boutons */
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px; /* Réduction du padding du bouton */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Réduction de la taille de la police */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Animation de survol */
+}
+
+/* Formulaires */
+input[type="text"], input[type="password"] {
+  padding: 8px; /* Réduction du padding */
+  width: 100%;
+  margin: 8px 0; /* Réduction de l'espacement entre les champs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem; /* Réduction de la taille de la police */
+}
+
+form div {
+  margin-bottom: 12px; /* Réduction de l'espace entre les champs du formulaire */
+}
+
+/* Conteneurs */
+.latency-results, .home-page, .latency-info, .latency-visuals, .targets-page-container {
+  margin-bottom: 60px; /* Uddil tnqay9 dyal content */
+  max-width: 800px; /* Réduction de la largeur maximale */
+  margin: auto;
+  padding: 15px;  /* Réduction de la taille du padding */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Réduction de l'espacement entre les conteneurs */
+}
+
+/* Cibles Page */
+.targets-page-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.targets-page-container h1 {
+  color: #007bff;
+  font-size: 1.8rem;  /* Réduction de la taille du titre */
+  margin-bottom: 15px; /* Réduction de l'espacement */
+}
+
+/* Liste des cibles */
+.target-list {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.target-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.target-list li {
+  padding: 14px;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.target-list li:last-child {
+  border-bottom: none;
+}
+
+/* Bouton de suppression */
+.target-list button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.target-list button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Formulaire d'ajout de cible */
+.add-target-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.add-target-form input {
+  padding: 12px;
+  width: 45%;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-target-form button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.add-target-form button:hover {
+  background-color: #218838;
+}
+
+/* Message d'erreur */
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  border: 2px solid #dc3545;
+}
+
+/* Titre de la page */
+h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Animations pour les graphiques */
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  animation: chartAnim 2s ease-in-out forwards;
+}
+
+.chart-container .chart {
+  width: 30%;
+  height: 300px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 2s ease-in-out forwards;
+}
+
+/* Animation des graphiques */
+@keyframes chartAnim {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Conteneur des recommandations */
+.recommendations-container {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  margin-top: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Titre de la section des recommandations */
+.recommendations-container h2 {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* Liste des recommandations */
+.recommendations-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations-container li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #e9f7fc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* États des recommandations */
+.recommendations-container li.success {
+  background-color: #d4edda; /* Fond vert clair */
+  border-left: 5px solid #28a745;
+}
+
+.recommendations-container li.warning {
+  background-color: #fff3cd; /* Fond jaune clair */
+  border-left: 5px solid #ffc107;
+}
+
+.recommendations-container li.error {
+  background-color: #f8d7da; /* Fond rouge clair */
+  border-left: 5px solid #dc3545;
+}
+
+/* Animation d'apparition des éléments */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.recommendations-container li:hover {
+  transform: scale(1.05); /* Légère augmentation de taille au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus marquée au survol */
+}
+/* Titre secondaire : Recommandations */
+.latency-info h4 {
+    font-size: 1.3rem;
+    color: #636e72; /* Gris légèrement plus clair */
+    margin-bottom: 15px;
+}
+
+/* Liste des recommandations */
+.latency-info ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.latency-info li {
+    font-size: 1.1rem;
+    color: #2d3436; /* Gris foncé */
+    margin-bottom: 10px;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Effet de survol sur les recommandations */
+.latency-info li:hover {
+    background-color: #dfe6e9;
+    border-color: #aab7b8;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.latency-info .high-latency {
+    color: #e74c3c; /* Rouge vif pour attirer l'attention */
+    font-weight: 700;
+}
+/* Animation d'apparition des éléments */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* Animation de transition pour la mesure */
+@keyframes scaleUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Application de l'animation à la mesure au début */
+.measurement-value {
+  animation: scaleUp 0.5s ease-out forwards;
+}
+/* Style du titre "Latence mesurée" */
+.latency-info h3 {
+    font-size: 2.2rem; /* Taille de police plus grande pour attirer l'attention */
+    color: #2c3e50; /* Gris foncé légèrement plus doux pour le texte */
+    font-weight: 700; /* Poids de la police plus lourd pour renforcer l'impact */
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #e3f2fd; /* Couleur d'arrière-plan douce et apaisante (bleu clair) */
+    border-left: 5px solid #81c784; /* Bordure verte douce pour apporter une touche naturelle */
+    border-radius: 8px; /* Coins arrondis pour un effet plus fluide */
+    text-align: center; /* Centrer le texte */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre subtile pour donner de la profondeur */
+}
+
+/* Effet de survol pour le titre */
+.latency-info h3:hover {
+    background-color: #81c784; /* Changer la couleur d'arrière-plan au survol (vert doux) */
+    color: #ffffff; /* Le texte devient blanc lorsqu'on survole */
+    transform: translateY(-4px); /* Légère élévation lors du survol */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+}
+
+
+
+

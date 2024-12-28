@@ -1,0 +1,148 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Dans styles.css */
+img {
+  width: 100px;  /* Ajustez la taille du logo */
+  height: auto;
+  margin-right: 20px;  /* Ajouter un espace entre l'image et le texte */
+}
+
+/* App.css */
+
+/* Style du titre */
+.logo-container h1 {
+  color: #0a7d9c; /* Choisissez une nuance de bleu qui convient à votre thème */
+  font-size: 1.5rem; /* Ajustez la taille du texte selon votre besoin */
+  font-weight: bold; /* Optionnel : pour rendre le texte plus gras */
+  transition: color 0.3s ease; /* Optionnel : pour une transition douce sur le survol */
+}
+
+.logo-container h1:hover {
+  color: #0056b3; /* Couleur bleue plus foncée au survol */
+}
+
+/* Styles existants */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  width: 100px;  /* Ajustez la taille du logo */
+  height: auto;
+  margin-right: 20px;  /* Ajouter un espace entre l'image et le texte */
+}
+/* Ajoutez ce CSS dans votre fichier de style (App.css ou un fichier spécifique) */
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;  /* Commence par une largeur de 0 */
+  animation: typing 5s steps(60) 1s forwards;  /* Animation pour augmenter la largeur */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* L'élément prend toute la largeur du texte */
+  }
+}
+/* Ajoutez ce CSS dans votre fichier App.css ou un fichier de style spécifique */
+.centered-title {
+  text-align: center;
+  color: #0a7d9c !important;  /* Utilisez !important pour garantir que ce style est appliqué */
+  font-size: 3rem;
+  margin-top: 20px;
+}
+/* Pour le titre h2 */
+.latency-results h2 {
+  color: #0a7d9c;  /* Applique une couleur bleue */
+  text-align: center;
+    font-size: 3rem;/* Centre le titre */
+}
+.latency-pie-chart {
+  max-width: 300px;  /* Ajustez cette valeur selon vos besoins */
+  margin: 0 auto;  /* Centre le pie chart */
+}
+
+.latency-pie-chart canvas {
+  width: 100% !important;  /* Assurez-vous que le canvas s'adapte à la taille */
+  height: auto !important;
+}
+
+
+
+
+
