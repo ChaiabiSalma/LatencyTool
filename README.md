@@ -124,7 +124,7 @@ networks:
 
 ### 1. Config
 
-  - *SecurityConfig:* la configuration de la sécurité de notre application Spring Boot.
+  - *WebConfig:* la configuration de la sécurité de notre application Spring Boot.
   
 ### 2. Controller
 
