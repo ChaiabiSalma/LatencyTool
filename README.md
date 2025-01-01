@@ -242,7 +242,7 @@ Voici les étapes pour configurer et exécuter votre projet en local :
      ng serve
      
 
-   - Accédez au frontend à [http://localhost:4200](http://localhost:4200) dans votre navigateur.
+   - Accédez au frontend à [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 Votre projet full-stack devrait maintenant être opérationnel localement. Si vous rencontrez des problèmes pendant l'installation, consultez les logs de la console pour des messages d'erreur et assurez-vous que toutes les dépendances et prérequis sont correctement installés.
 
