@@ -112,18 +112,14 @@ networks:
 
 ### Technologies Used
 
-- Angular
 - HTML
 - CSS
-- TS
 
 ## Frontend Projet Structure
 
-*LatencyForm :* permet à l'utilisateur d'entrer une adresse IP, de soumettre une requête pour mesurer la latence vers cette IP, et d'afficher les résultats dans la même interface.
+*LatencyResults :* Permet à l'utilisateur de saisir une adresse IP, d'envoyer cette IP à une API pour mesurer la latence, puis d'afficher la latence mesurée et les recommandations associées.
 
-*LatencyResults :* permet à l'utilisateur de saisir une adresse IP, d'envoyer cette IP à une API pour mesurer la latence, puis d'afficher la latence mesurée et les recommandations associées.
-
-*TargetList :* fournit une interface simple et fonctionnelle pour récupérer et afficher les cibles à partir de l'API. Il s'assure que les données sont récupérées de manière asynchrone et sont affichées proprement, tout en gérant les états locaux dans React.
+*TargetPage :* Fournit une interface simple et fonctionnelle pour récupérer et afficher les cibles à partir de l'API. Il s'assure que les données sont récupérées de manière asynchrone et sont affichées proprement, tout en gérant les états locaux dans React.
 
 
 ## 🖥 Backend
@@ -134,11 +130,11 @@ networks:
 
 ### Backend Project Structure
  
- The backend code follows a modular and organized structure, leveraging the power of Spring Boot for building a robust and scalable application.
+The backend code follows a modular and organized structure, leveraging the power of Spring Boot for building a robust and scalable application.
 
 ### 1. Config
 
-  - *WebConfig:* la configuration de la sécurité de notre application Spring Boot.
+  - *WebConfig:* La configuration de la sécurité de notre application Spring Boot.
   
 ### 2. Controller
 
@@ -146,31 +142,27 @@ networks:
  
  - *RecommendationController* : Elle analyse les résultats de latence et fournir des conseils sur la façon d'améliorer le réseau ou d'optimiser les performances.
  
- - *TargetController :* construite pour gérer les cibles dans votre application, permettant de récupérer, créer, supprimer et consulter des cibles via des requêtes HTTP RESTful.
+ - *TargetController :* Construite pour gérer les cibles dans votre application, permettant de récupérer, créer, supprimer et consulter des cibles via des requêtes HTTP RESTful.
  
 ### 3. Model
 
-  - *Target :* représente une cible (un serveur ou une machine) à partir de laquelle vous mesurez la latence. Chaque cible a un nom d'hôte (hostname) et une adresse IP (ipAddress).
+  - *Target :* Représente une cible (un serveur ou une machine) à partir de laquelle vous mesurez la latence. Chaque cible a un nom d'hôte (hostname) et une adresse IP (ipAddress).
 
-  - *LatencyResult :* représente un résultat de mesure de latence pour une cible spécifique.
+  - *LatencyResult :* Représente un résultat de mesure de latence pour une cible spécifique.
   
-  - *User :* utilisée pour stocker les informations des utilisateurs dans la base de données.
   
 ### 4. Repository
 
-  - *TargetRepository :* permet d'effectuer des opérations CRUD sur la table Target en base de données. Elle inclut une méthode findByIpAddress qui permet de récupérer une cible en fonction de son adresse IP.
+  - *TargetRepository :* Permet d'effectuer des opérations CRUD sur la table Target en base de données. Elle inclut une méthode findByIpAddress qui permet de récupérer une cible en fonction de son adresse IP.
   
-  - *LatencyResultRepository :* une interface qui étend JpaRepository, ce qui lui permet d'interagir facilement avec la base de données pour effectuer des opérations CRUD sur l'entité LatencyResult.
-  
-  - *UserRepository :* permet de récupérer un utilisateur par son nom d'utilisateur grâce à la méthode findByUsername.
-  
+  - *LatencyResultRepository :* Une interface qui étend JpaRepository, ce qui lui permet d'interagir facilement avec la base de données pour effectuer des opérations CRUD sur l'entité LatencyResult.
+
 ### 5. Service
 
-  - *LatencyService :* un service Spring qui contient la logique métier pour mesurer la latence d'une cible (identifiée par son adresse IP) et enregistrer le résultat de cette mesure dans la base de données.
+  - *LatencyService :* Un service Spring qui contient la logique métier pour mesurer la latence d'une cible (identifiée par son adresse IP) et enregistrer le résultat de cette mesure dans la base de données.
   
-  - *RecommandationService :* génère des recommandations qui sont ensuite envoyées par le contrôleur (RecommendationController) via une API REST.
-  
-  - *CustomUserDetailsService :* implémente UserDetailsService et est responsable de la conversion des données utilisateur en un format que Spring Security peut utiliser pour l'authentification et l'autorisation
+  - *RecommandationService :* Génère des recommandations qui sont ensuite envoyées par le contrôleur (RecommendationController) via une API REST.
+ 
 
 ### Dependencies
 
