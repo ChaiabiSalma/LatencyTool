@@ -1,21 +1,20 @@
-version: '3.8'
 
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     container_name: mysql-container
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: latency_tool
-      MYSQL_USER: sa
-      MYSQL_PASSWORD: ""
     ports:
       - "3306:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
+      interval: 20s
+      timeout: 10s
+      retries: 5
+    networks:
+      - custom_network
 
   backend:
     build:
@@ -25,10 +24,11 @@ services:
       - "8085:8085"
     depends_on:
       - mysql
+    entrypoint: [ "sh", "-c", "until nc -z mysql 3306; do echo 'Waiting for MySQL...'; sleep 2; done; java -jar app.jar" ]
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/latency_tool
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: ""
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: "true"
@@ -38,6 +38,8 @@ services:
       SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE: 5
       SPRING_DATASOURCE_HIKARI_IDLE_TIMEOUT: 30000
       SPRING_DATASOURCE_HIKARI_MAX_LIFETIME: 1800000
+    networks:
+      - custom_network
 
   frontend:
     build:
@@ -48,17 +50,21 @@ services:
       - "3000:80"
     depends_on:
       - backend
+    networks:
+      - custom_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:5.1
     container_name: phpmyadmin-container
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "8081:80"
+      - "8080:80"
+    networks:
+      - custom_network
 
 networks:
-  default:
+  custom_network:
     driver: bridge
