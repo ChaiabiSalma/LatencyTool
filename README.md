@@ -96,7 +96,7 @@ networks:
 
 ```
 
-### REMARQUE 
+### ⚠️ REMARQUE 
 *chemin des fichiers Docker :*
    - Après avoir ouvert le projet sur votre machine, il est nécessaire de modifier le chemin du fichier docker en backend et en frontend dans le fichier docker-compose.yml en fonction de l'endroit où vous avez placé le projet et le fils docker.
      
