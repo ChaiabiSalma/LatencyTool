@@ -15,9 +15,10 @@ Ce projet est une application interactive qui permet de mesurer la latence rése
 ![WhatsApp Image 2025-01-01 à 12 24 37_6b778eda](https://github.com/user-attachments/assets/6858f9e0-4466-4d2e-8ce6-410dae0f9c9b)
 
 - **Frontend** : React.js, React Chart.js.
-- **Backend** : Node.js, Spring Boot.
+- **Backend** : Node.js, Spring Boot, Spring Data JPA.
 - **Bibliothèques** :
   - Chart.js pour les graphiques.
+-**Base de donées** : MYSQL (gérée via XAMPP)
 
 ## 🐳 *Docker*
 ### *docker-compose.yml :*
