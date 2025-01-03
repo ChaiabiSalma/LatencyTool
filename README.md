@@ -114,6 +114,7 @@ networks:
 
 - HTML
 - CSS
+- JavaScript
 
 ## Frontend Projet Structure
 
